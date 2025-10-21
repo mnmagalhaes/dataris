@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataris - Onde os Dados Ganham Propósito</title>
+    <!-- Google Fonts: Orbitron para títulos, Inter para texto -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS para responsividade -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Paleta de Cores */
+        :root {
+            --azul-eletrico: #000000;
+            --roxo-profundo: #6F00FF;
+            --preto-grafite: #121212;
+            --branco-neutro: #FFFFFF;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--preto-grafite);
+            color: var(--branco-neutro);
+            line-height: 1.6;
+            max-width: 100%; height: auto;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--azul-eletrico), var(--roxo-profundo));
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 123, 255, 0.3)
+                }
+        
+        .logo {
+            height: 50px; /* Ajuste conforme necessário */
+        }
+        
+        .slogan {
+            font-style: italic;
+            color: var(--branco-neutro);
+            font-size: 1.1rem;
+        }
+        
+        /* Seções */
+        section {
+            padding: 80px 0;
+        }
+        
+        .hero {
+            background: var(--preto-grafite);
+            text-align: center;
+            padding-top: 100px; /* Espaço para header fixo */
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--azul-eletrico);
+            margin-bottom: 1rem;
+        }
+        
+        .btn-primary {
+            background: var(--roxo-profundo);
+            border: none;
+            padding: 10px 30px;
+            font-family: 'Orbitron', monospace;
+            transition: background 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background: var(--azul-eletrico);
+        }
+        
+        /* Serviços */
+        .servico-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--azul-eletrico);
+            border-radius: 154px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 2rem;
+        }
+        .servico-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
+        }
+        
+        .servico-icon {
+            font-size: 3rem;
+            color: var(--roxo-profundo);
+            margin-bottom: 1rem;
+        }
+        
+        /* Contato */
+        .contato-form {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--azul-eletrico);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--preto-grafite);
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--azul-eletrico);
+        }
+        
+        /* Animações sutis */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        section {
+            animation: fadeIn 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <!-- Logo SVG Inline (versão transparente adaptada para header) -->
+                <svg width="150" height="50" viewBox="0 0 150 50" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Ícone: Círculo em camadas com traços de fluxo -->
+                    <g fill="none" stroke="white" stroke-width="2">
+                        <circle cx="25" cy="25" r="20" fill="none" stroke="#007BFF"/>
+                        <circle cx="25" cy="25" r="15" fill="none" stroke="#6F00FF" stroke-dasharray="5,5"/>
+                        <line x1="25" y1="5" x2="25" y2="45" stroke="#007BFF" stroke-dasharray="3,3"/>
+                        <line x1="5" y1="25" x2="45" y2="25" stroke="#6F00FF" stroke-dasharray="3,3"/>
+                    </g>
+                    <!-- Texto "Dataris" -->
+                    <text x="55" y="32" font-family="Orbitron, monospace" font-size="24" font-weight="bold" fill="white">Dataris</text>
+                </svg>
+            </a>
+            <span class="slogan ms-auto d-none d-lg-block">Onde os dados ganham propósito.</span>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Desenvolvimento Web</h1>
+            <p class="lead">Transformamos ideias em sites e sistemas funcionais, rápidos e seguros. Criamos soluções web personalizadas para impulsionar sua presença digital e o crescimento do seu negócio.</p>
+            <a href="#servicos" class="btn btn-primary btn-lg">Nossos Serviços</a>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="bg-dark">
+        <div class="container">
+            <h2 class="text-center mb-5" style="color: var(--azul-eletrico);">Sobre o Desenvolvimento Web</h2>
+            <p class="text-center">Desenvolvimento Web é a criação e manutenção de sites e aplicações online, garantindo funcionalidade, performance e experiência do usuário. Ele conecta sua empresa ao mundo digital, transformando ideias em soluções acessíveis e eficientes.</p>
+
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos">
+        <div class="container">
+            <h2 class="text-center mb-5" style="color: var(--roxo-profundo);">Nossos Serviços</h2>
+            <div class="row">
+                <!-- DBA -->
+                <justify-content-center>
+                    <div class="servico-card">
+                        <div class="servico-icon">🗄️</div>
+                        <h3>Desenvolvimento Web</h3>
+                        <p>Transformamos ideias em experiências digitais completas, criando sites e sistemas funcionais, rápidos e seguros. Nossas soluções são personalizadas para atender desde pequenas empresas até grandes corporações, sempre com foco em performance, usabilidade e resultados.
+
+<ul class="text-start">
+    <li><strong>Criação de Sites e Landing Pages:</strong> Design moderno, responsivo e alinhado à identidade da sua marca.</li>
+    <li><strong>Desenvolvimento de Sistemas Web:</strong> Aplicações web que otimizam processos e melhoram a eficiência do seu negócio.</li>
+    <li><strong>Otimização e Performance:</strong> Sites rápidos e funcionais, garantindo melhor experiência ao usuário e maior retenção.</li>
+    <li><strong>Manutenção e Suporte Técnico:</strong> Monitoramento contínuo, atualizações e suporte para manter sua presença digital estável.</li>
+    <li><strong>Consultoria em Estratégia Digital:</strong> Orientação para soluções tecnológicas que potencializam resultados e crescimento.</li>
+</ul>
+<p><strong>Criamos experiências digitais que unem design, tecnologia e resultados para seu negócio. 
+    Sites e sistemas web que impressionam, funcionam e impulsionam sua presença online.</strong></p>
+<p><strong>Transformamos sua ideia em soluções digitais rápidas, seguras e escaláveis.</strong></p>
+                    </div>
+                </div>
+                <!-- Dev Web -->
+                <div class="col-md-6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Dataris. Todos os direitos reservados. | Onde os dados ganham propósito.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Scroll suave para âncoras
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
